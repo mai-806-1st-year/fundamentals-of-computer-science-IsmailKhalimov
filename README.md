@@ -78,10 +78,69 @@ echo  "There are folder here: $(ls -l)"
 
 ### 8.Пример работы команд:
 
-![piclure](lab1.png)
+```
+ismail@ismail-VirtualBox:~$ whoami
+ismail
+ismail@ismail-VirtualBox:~$ who
+ismail   tty2         2022-10-01 09:14 (tty2)
+ismail@ismail-VirtualBox:~$ date
+Сб 01 окт 2022 09:49:32 MSK
+ismail@ismail-VirtualBox:~$ pwd
+/home/ismail
+ismail@ismail-VirtualBox:~$ ls
+ snap            text.sh   Документы   Изображения   Общедоступные   Шаблоны
+ StartWithUNIX   Видео     Загрузки    Музыка       'Рабочий стол'
+ismail@ismail-VirtualBox:~$ nano text.txt
+ismail@ismail-VirtualBox:~$ cat text.txt
+First Test
+
+ismail@ismail-VirtualBox:~$ cp text.txt Документы
+ismail@ismail-VirtualBox:~$ cd Документы
+ismail@ismail-VirtualBox:~/Документы$ ls
+text.txt
+ismail@ismail-VirtualBox:~/Документы$ rm text.txt
+ismail@ismail-VirtualBox:~/Документы$ ls
+ismail@ismail-VirtualBox:~/Документы$ cd -
+/home/ismail
+ismail@ismail-VirtualBox:~$ mkdir dir/
+ismail@ismail-VirtualBox:~$ ls
+ dir             text.sh    Документы     Музыка          Шаблоны
+ snap            text.txt   Загрузки      Общедоступные
+ StartWithUNIX   Видео      Изображения  'Рабочий стол'
+ismail@ismail-VirtualBox:~$ rm -r dir
+ismail@ismail-VirtualBox:~$ ls
+ snap            text.txt    Загрузки      Общедоступные
+ StartWithUNIX   Видео       Изображения  'Рабочий стол'
+ text.sh         Документы   Музыка        Шаблоны
+ismail@ismail-VirtualBox:~$ 
+```
 
 #### Запуск скрипта:
-![piclure](scr.png)
+```
+ismail@ismail-VirtualBox:~$ ./text.sh
+The current date is:
+Сб 01 окт 2022 09:56:32 MSK
+The username is:
+ismail
+The informasion about user:
+ismail   tty2         2022-10-01 09:14 (tty2)
+The current directory is:
+/home/ismail
+There are all Folders
+итого 48
+drwx------ 5 ismail ismail 4096 сен 24 13:00  snap
+drwxrwxr-x 3 ismail ismail 4096 сен 27 13:18  StartWithUNIX
+-rwxrwxr-x 1 ismail ismail  187 сен 28 15:32  text.sh
+-rw-rw-r-- 1 ismail ismail   12 окт  1 09:50  text.txt
+drwxr-xr-x 2 ismail ismail 4096 сен 24 12:53  Видео
+drwxr-xr-x 2 ismail ismail 4096 окт  1 09:51  Документы
+drwxr-xr-x 2 ismail ismail 4096 сен 27 13:06  Загрузки
+drwxr-xr-x 2 ismail ismail 4096 сен 24 12:53  Изображения
+drwxr-xr-x 2 ismail ismail 4096 сен 24 12:53  Музыка
+drwxr-xr-x 2 ismail ismail 4096 сен 24 12:53  Общедоступные
+drwxr-xr-x 3 ismail ismail 4096 сен 27 12:45 'Рабочий стол'
+drwxr-xr-x 2 ismail ismail 4096 сен 24 12:53  Шаблоны
+```
 
 ### 9.Вывод работы:
 
