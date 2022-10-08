@@ -60,7 +60,66 @@ _групповая передача файлов на удалённую маш
 
 ### 8.Пример работы команд:
 
-```
+``stud@it-17:~$ ssh stud@192.168.2.162
+The authenticity of host '192.168.2.162 (192.168.2.162)' can't be established.
+ED25519 key fingerprint is SHA256:YIsChpiFwtLa0j9mRsG8e1xcA9rZlWTiM0whDRRSsxA.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.2.162' (ED25519) to the list of known hosts.
+stud@192.168.2.162's password: 
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-47-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+151 updates can be applied immediately.
+57 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+Last login: Sat Oct  8 10:00:50 2022 from 192.168.2.163
+stud@it-32:~$ ls
+1.txt    Desktop    fil1      hello   Pictures  Public  Templates  xyu.txt
+aaa.txt  Documents  fil1.txt  Music   ping.gz   remote  test.txt   XYZ
+ar.tar   Downloads  ghfs      ourdir  ping.txt  snap    Videos
+stud@it-32:~$ touch text.txt
+stud@it-32:~$ ls
+1.txt    Desktop    fil1      hello   Pictures  Public  Templates  Videos
+aaa.txt  Documents  fil1.txt  Music   ping.gz   remote  test.txt   xyu.txt
+ar.tar   Downloads  ghfs      ourdir  ping.txt  snap    text.txt   XYZ
+stud@it-32:~$ logout
+Connection to 192.168.2.162 closed.
+stud@it-17:~$ scp stud@192.168.2.162:/home/stud/4444.txt
+usage: scp [-346ABCOpqRrsTv] [-c cipher] [-D sftp_server_path] [-F ssh_config]
+           [-i identity_file] [-J destination] [-l limit]
+           [-o ssh_option] [-P port] [-S program] source ... target
+stud@it-17:~$ scp 4444.txt stud@192.168.2.162:/home/stud
+stud@192.168.2.162's password: 
+4444.txt                                      100%    0     0.0KB/s   00:00    
+stud@it-17:~$ ssh stud@192.168.2.162
+stud@192.168.2.162's password: 
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-47-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+151 updates can be applied immediately.
+57 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+Last login: Sat Oct  8 10:31:04 2022 from 192.168.2.160
+stud@it-32:~$ ls
+1.txt     Desktop    fil1.txt  ourdir    Public     test.txt  XYZ
+4444.txt  Documents  ghfs      Pictures  remote     text.txt
+aaa.txt   Downloads  hello     ping.gz   snap       Videos
+ar.tar    fil1       Music     ping.txt  Templates  xyu.txt
 
 ```
 
