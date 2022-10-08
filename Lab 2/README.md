@@ -60,7 +60,8 @@ _групповая передача файлов на удалённую маш
 
 ### 8.Пример работы команд:
 
-``stud@it-17:~$ ssh stud@192.168.2.162
+```
+stud@it-17:~$ ssh stud@192.168.2.162
 The authenticity of host '192.168.2.162 (192.168.2.162)' can't be established.
 ED25519 key fingerprint is SHA256:YIsChpiFwtLa0j9mRsG8e1xcA9rZlWTiM0whDRRSsxA.
 This key is not known by any other names
@@ -92,10 +93,6 @@ aaa.txt  Documents  fil1.txt  Music   ping.gz   remote  test.txt   xyu.txt
 ar.tar   Downloads  ghfs      ourdir  ping.txt  snap    text.txt   XYZ
 stud@it-32:~$ logout
 Connection to 192.168.2.162 closed.
-stud@it-17:~$ scp stud@192.168.2.162:/home/stud/4444.txt
-usage: scp [-346ABCOpqRrsTv] [-c cipher] [-D sftp_server_path] [-F ssh_config]
-           [-i identity_file] [-J destination] [-l limit]
-           [-o ssh_option] [-P port] [-S program] source ... target
 stud@it-17:~$ scp 4444.txt stud@192.168.2.162:/home/stud
 stud@192.168.2.162's password: 
 4444.txt                                      100%    0     0.0KB/s   00:00    
