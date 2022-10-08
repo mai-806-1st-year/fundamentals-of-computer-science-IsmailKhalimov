@@ -61,42 +61,9 @@ _групповая передача файлов на удалённую маш
 ### 8.Пример работы команд:
 
 ```
-ismail@ismail-VirtualBox:~$ whoami
-ismail
-ismail@ismail-VirtualBox:~$ who
-ismail   tty2         2022-10-01 09:14 (tty2)
-ismail@ismail-VirtualBox:~$ date
-Сб 01 окт 2022 09:49:32 MSK
-ismail@ismail-VirtualBox:~$ pwd
-/home/ismail
-ismail@ismail-VirtualBox:~$ ls
- snap            text.sh   Документы   Изображения   Общедоступные   Шаблоны
- StartWithUNIX   Видео     Загрузки    Музыка       'Рабочий стол'
-ismail@ismail-VirtualBox:~$ nano text.txt
-ismail@ismail-VirtualBox:~$ cat text.txt
-First Test
 
-ismail@ismail-VirtualBox:~$ cp text.txt Документы
-ismail@ismail-VirtualBox:~$ cd Документы
-ismail@ismail-VirtualBox:~/Документы$ ls
-text.txt
-ismail@ismail-VirtualBox:~/Документы$ rm text.txt
-ismail@ismail-VirtualBox:~/Документы$ ls
-ismail@ismail-VirtualBox:~/Документы$ cd -
-/home/ismail
-ismail@ismail-VirtualBox:~$ mkdir dir/
-ismail@ismail-VirtualBox:~$ ls
- dir             text.sh    Документы     Музыка          Шаблоны
- snap            text.txt   Загрузки      Общедоступные
- StartWithUNIX   Видео      Изображения  'Рабочий стол'
-ismail@ismail-VirtualBox:~$ rm -r dir
-ismail@ismail-VirtualBox:~$ ls
- snap            text.txt    Загрузки      Общедоступные
- StartWithUNIX   Видео       Изображения  'Рабочий стол'
- text.sh         Документы   Музыка        Шаблоны
-ismail@ismail-VirtualBox:~$ 
 ```
 
 ### 9.Вывод работы:
 
-__Я вводил команды ОС UNIX попутно изучая подробности их функций. Получил базовые знания работы с терминалом. Также ввёл команды в скрипт и запустил его.__
+__Изучив основные команды для телекомуникации я научился удалённо совершать действия на устройстве__
