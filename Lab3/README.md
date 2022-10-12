@@ -4,24 +4,27 @@
 
 <b>Контакты e-mail:</b> <ins>lirikfeed049@gmail.com</ins>
 
-<b>Работа выполнена:</b> «8» <ins>октября</ins> <ins>2022</ins> г.
+<b>Работа выполнена:</b> «15» <ins>октября</ins> <ins>2022</ins> г.
 
 <b>Преподаватель:</b> <ins>асп. каф. 806 Сахарин Никита Александрович</ins>
 
-<b>Входной контроль знаний с оценкой:</b> <ins>5 (отлично)</ins>
+<b>Входной контроль знаний с оценкой:</b> <ins></ins>
 
-<b>Отчет сдан</b> «24» <ins>сентября</ins> <ins>2022</ins> г., <b>итоговая оценка</b> <ins>5 (отлично)</ins>
+<b>Отчет сдан</b> «24» <ins>сентября</ins> <ins>2022</ins> г., <b>итоговая оценка</b> <ins></ins>
+
+<b>Вариант  8 </b>
 
 <b>Подпись преподавателя:</b> ________________
 
+
 ### 1. Тема работы:
-__Сети и телекоммуникации в ОС UNIX__
+__Программирование машин Тьюринга__
 
 ### 2. Цель работы:
-__Обучение навыкам, необходимым для подключения к другим устройствам UNIX__
+__Научиться работать на машине Тьюринга__
 
 ### 3. Задание:
-__Запомнить основные команды и опробовать их на практике__
+__Обмен местами разрядов двоичного числа, находящихся на чёиных и нечётных позициях__
 
 ### 4. Оборудование:
 ___Процессор___: AMD Ryzen 5 3500U (8) @ 2.10GHz \
@@ -34,103 +37,50 @@ ___Интерпритатор команд___ bash, ___версия___ 5.1.16
 ___Редактор текстов___ nano
 
 ### 6. Идея, метод, алгоритм решения:
-__Для достижения поставленной цели используем основные команды для удалённого подключения к устройствам.__
+__Для выполнения задания я использую команды из справочника по работе с машиной Тьюринга__
 
 ### 7. Сценарий выполнения работы:
-#### Используемые команды для:
+#### Формат команды: q,a,v,q':
+1. q - текущее состояние;
+2. a - знак, который видим на ленте;
+3. v - знак, который пишем или команда;
+4. q' - состояние, в которое переходим.
+#### Возможные команды МТ:
+1. '>' - движение головки вправо;
+2. '<' - движение головки влево;
+3. '=' - отсутствие движения на данном такте;
+4. '#' - полная остановка машины.
 
-    ssh user@ip
-_удалённое подключение к устройству с определённым ip_
 
-    rlogin
-_запуск процесса login того же пользователя на псевдотерминале_
-
-    telnet
-_запускается процесс инициалтзации псевдотерминала getty на удалённой машине_
-
-    scp 
-_копирование файла из текущей машиы в удаённую_
-
-    rsync
-_синхронизация каталогов на разных ЭВМ_
-
-    tar
-_копирование файлов и каталогов в файл сжатого архива_
-
-    get
-_получение файлов из удалённой машины_
-
-    put
-_передача файлов на удалённую машину_
-    
-    mget
-_групповое получение файлов из удалённой машны_
-
-    mput
-_групповая передача файлов на удалённую машину_
-
-### 8.Пример работы команд:
+### 8.Код для решения задачи:
 
 ```
-stud@it-17:~$ ssh stud@192.168.2.162
-The authenticity of host '192.168.2.162 (192.168.2.162)' can't be established.
-ED25519 key fingerprint is SHA256:YIsChpiFwtLa0j9mRsG8e1xcA9rZlWTiM0whDRRSsxA.
-This key is not known by any other names
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added '192.168.2.162' (ED25519) to the list of known hosts.
-stud@192.168.2.162's password: 
-Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-47-generic x86_64)
+00, ,<,rep
+rep,0,<,movie  rep,1,<,movei  rep, ,#,rep  
+movie,0,<,rep  movie,1,0,mov
+movei,1,<,rep  movei,0,1,mov
+rap,0,1,move rap,1,0,move
+mov,0,>,rap mov,1,>,rap
+move,0,<,movee move,1,<,movee
+movee,0,<,rep movee,1,<,rep
 
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
+```
 
-151 updates can be applied immediately.
-57 of these updates are standard security updates.
-To see these additional updates run: apt list --upgradable
+### Код для работы от начала примера:
+```
 
-
-The list of available updates is more than a week old.
-To check for new updates run: sudo apt update
-Last login: Sat Oct  8 10:00:50 2022 from 192.168.2.163
-stud@it-32:~$ ls
-1.txt    Desktop    fil1      hello   Pictures  Public  Templates  xyu.txt
-aaa.txt  Documents  fil1.txt  Music   ping.gz   remote  test.txt   XYZ
-ar.tar   Downloads  ghfs      ourdir  ping.txt  snap    Videos
-stud@it-32:~$ touch text.txt
-stud@it-32:~$ ls
-1.txt    Desktop    fil1      hello   Pictures  Public  Templates  Videos
-aaa.txt  Documents  fil1.txt  Music   ping.gz   remote  test.txt   xyu.txt
-ar.tar   Downloads  ghfs      ourdir  ping.txt  snap    text.txt   XYZ
-stud@it-32:~$ logout
-Connection to 192.168.2.162 closed.
-stud@it-17:~$ scp 4444.txt stud@192.168.2.162:/home/stud
-stud@192.168.2.162's password: 
-4444.txt                                      100%    0     0.0KB/s   00:00    
-stud@it-17:~$ ssh stud@192.168.2.162
-stud@192.168.2.162's password: 
-Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-47-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-151 updates can be applied immediately.
-57 of these updates are standard security updates.
-To see these additional updates run: apt list --upgradable
-
-
-The list of available updates is more than a week old.
-To check for new updates run: sudo apt update
-Last login: Sat Oct  8 10:31:04 2022 from 192.168.2.160
-stud@it-32:~$ ls
-1.txt     Desktop    fil1.txt  ourdir    Public     test.txt  XYZ
-4444.txt  Documents  ghfs      Pictures  remote     text.txt
-aaa.txt   Downloads  hello     ping.gz   snap       Videos
-ar.tar    fil1       Music     ping.txt  Templates  xyu.txt
+00, ,<,start
+start, ,>,rep  start,1,<,start start,0,<,start 
+rep,0,>,movie  rep,1,>,movei  rep, ,#,rep  
+movie,0,>,rep  movie,1,0,mov  movie, ,#,movie
+movei,1,>,rep  movei,0,1,mov  movei, ,#,movei
+rap,0,1,move rap,1,0,move
+mov,0,<,rap mov,1,<,rap
+move,0,>,movee move,1,>,movee
+movee,0,>,rep movee,1,>,rep
 
 ```
 
 ### 9.Вывод работы:
 
-__Изучив основные команды для телекомуникации я научился удалённо совершать действия на устройстве__
+__Изучив комнады для работы на машине Тьюринга я смог выполнить посталенную передо мной задачу__
