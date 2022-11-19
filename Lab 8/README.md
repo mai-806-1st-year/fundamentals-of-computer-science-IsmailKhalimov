@@ -53,52 +53,49 @@ __Для достижения поставленной цели использу
 ```
 #include <stdio.h>
 #include <stdbool.h>
+typedef struct {
+    int i, j, l ;
+} triang ;
 int max (int a, int b) {
-    if (a >= b) return a;
-    else return b;
+    return a < b ? b : a;
 }
 int min (int a, int b){
-    if (a <= b) return a;
-    else return b;
+    return a > b ? b : a;
 }
 int sign(int a){
-    if (a > 0) return 1;
-    else if (a == 0) return 0;
-    else return -1;
+    return a > 0 ? 1 : a < 0 ? -1 : 0;
 }
 int m(int a){
-    if (a >= 0) return a;
-    else return -1 * a;
+    return a > 0 ? a : -1 * a;
 }
 int pr(int a, int b, int c){
-    if ((a >= b) && (a <= c)) return true;
-    else return false;
+    return ((a >= b) && (a <=c)) ? true : false;
 }
 int tr(int a, int b){
-    if ((a == -10) && (pr(b, 0, 20))) return true;
-    else return false;
-    if (pr(a, -9, 0) && ((a-b == -10) || (a+b == 10)) && (pr(b, 1, 19))) return true;
-    else return false;
+    return (((a == -10) && (pr(b, 0, 20))) || ((pr(a, -9, 0) && ((a - b == -10) || (a + b == 10))) && pr (b, 1, 19))) ? true : false;
 }
-int main(){
+int main(void){
 
-int i = -12, j = -22, l = 11;
-
+triang s = {-12, -22, 11} ;
 
 for(int k = 0; k < 51; k++){
-    i = max(min(i-j, j-l) % 20, min(i-l, j-k) % 20) + 10;
-    j = (sign(i-j) * min(i % 20, j % 20)) - (max(m(i-l), m(k-20)) % 20) + 20;
-    l = (i % 10) * (j % 10) + l % 10;
-    if (tr(i, j)) {
-        printf ("%d, %d", i, j);
+    triang b = {s.i, s.j, s.l} ;
+    
+    s.i = max(min(b.i-b.j, b.j-b.l) % 20, min(b.i-b.l, b.j-k) % 20) + 10;
+    s.j = (sign(b.i-b.j) * min(b.i % 20, b.j % 20)) - (max(m(b.i-b.l), m(k-20)) % 20) + 20;
+    s.l = (b.i % 10) * (b.j % 10) + b.l % 10;
+    if (tr(s.i, s.j)) {
+        printf ("%d, %d \n", s.i, s.j);
         printf("Hit!");
         return 0;
+        
+    }
 }
-printf ("Missing \n");
-printf ("%d, %d", i, j);
+printf ("Missing, \n");
+printf ("%d, %d", s.i, s.j);
 return 0;
 }
-}
+
 ```
 
 ## 9. Дневник отладки должен содержать дату и время сеансов отладки и основные события (ошибки в сценарии и программе, нестандартные ситуации) и краткие комментарии к ним. В дневнике отладки приводятся сведения об использовании других ЭВМ, существенном участии преподавателя и других лиц в написании и отладке программы.
