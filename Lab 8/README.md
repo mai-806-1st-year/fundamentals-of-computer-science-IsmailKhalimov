@@ -98,50 +98,18 @@ return 0;
 
 ### 8. Распечатка протокола 
 ```
-#include <stdio.h>
-#include <stdbool.h>
-typedef struct {
-    int i, j, l ;
-} triang ;
-int max (int a, int b) {
-    return a < b ? b : a;
-}
-int min (int a, int b){
-    return a > b ? b : a;
-}
-int sign(int a){
-    return a > 0 ? 1 : a < 0 ? -1 : 0;
-}
-int m(int a){
-    return a > 0 ? a : -1 * a;
-}
-int pr(int a, int b, int c){
-    return ((a >= b) && (a <=c)) ? true : false;
-}
-int tr(int a, int b){
-    return (((a == -10) && (pr(b, 0, 20))) || ((pr(a, -9, 0) && ((a - b == -10) || (a + b == 10))) && pr (b, 1, 19))) ? true : false;
-}
-int main(void){
-
-triang s = {-12, -22, 11} ;
-
-for(int k = 0; k < 51; k++){
-    triang b = {s.i, s.j, s.l} ;
-    
-    s.i = max(min(b.i-b.j, b.j-b.l) % 20, min(b.i-b.l, b.j-k) % 20) + 10;
-    s.j = (sign(b.i-b.j) * min(b.i % 20, b.j % 20)) - (max(m(b.i-b.l), m(k-20)) % 20) + 20;
-    s.l = (b.i % 10) * (b.j % 10) + b.l % 10;
-    if (tr(s.i, s.j)) {
-        printf ("%d, %d \n", s.i, s.j);
-        printf("Hit!");
-        return 0;
-        
-    }
-}
-printf ("Missing, \n");
-printf ("%d, %d", s.i, s.j);
-return 0;
-}
+PS C:\Users\lirik\OneDrive\Рабочий стол\Лаб> gcc -Wall -pedantic -std=c99 -g 9pr.c -o 9pr.exe
+9pr.c: In function 'main':
+9pr.c:13:5: warning: implicit declaration of function 'hexagon' [-Wimplicit-function-declaration]
+   13 |     hexagon();
+      |     ^~~~~~~
+PS C:\Users\lirik\OneDrive\Рабочий стол\Лаб> ./9pr.exe
+4 4 4 4 4
+HIT!
+PS C:\Users\lirik\OneDrive\Рабочий стол\Лаб> ./9pr.exe
+1 1 1 4 4 
+Missing(
+PS C:\Users\lirik\OneDrive\Рабочий стол\Лаб>
 
 ```
 
