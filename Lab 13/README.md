@@ -45,19 +45,24 @@
 ## 7. Сценарий выполнения работы [план работы, первоначальный текст программы в черновике (можно на отдельном листе) и тесты либо соображения по тестированию]. 
 Тесты:
 
-Ввод:
-My Name is Lise
-Вывод:
-YES
+Ввод: <br/>
+My Name is Lise <br/>
 
-Ввод:
-Scientists should study without weekends
-Вывод:
-NO
+Вывод: <br/>
+YES <br/>
+_________
 
-Ввод:
-jfjjfjejfjf
-Вывод:
+Ввод: <br/>
+Scientists should study without weekends <br
+                                             
+Вывод: <br/>
+NO <br/>
+________
+
+Ввод: <br/>
+jfjjfjejfjf <br/>
+
+Вывод: <br/>
 YES
 
 ``` c:13.c
