@@ -53,7 +53,7 @@ YES <br/>
 _________
 
 Ввод: <br/>
-Scientists should study without weekends <br
+Scientists should study without weekends <br/>
                                              
 Вывод: <br/>
 NO <br/>
