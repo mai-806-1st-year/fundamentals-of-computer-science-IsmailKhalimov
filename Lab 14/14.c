@@ -1,14 +1,27 @@
 #include <stdio.h>
 
-enum { maxn = 100 };
+enum { maxn = 8 };
+void matrix_input(int n, int (*m)[n]);
+void matrix_interpretation(int n, int (*m)[n]);
 
-int main(){
-    int m[maxn][maxn];
+int main(void){
+    int m[maxn * maxn];
     int n;
     scanf("%d", &n);
-    for (int i = 0; i != n; ++i)
-        for (int j = 0; j != n; ++j)
+    matrix_input(n, (int (*)[n]) m);
+    matrix_interpretation(n, (int (*)[n]) m);
+    return 0;
+}
+
+void matrix_input(int n, int (*m)[n]){
+    for (int i = 0; i < n; ++i){
+        for (int j = 0; j < n; ++j){
             scanf("%d", &m[i][j]);
+        }
+    }
+}
+
+void matrix_interpretation(int n, int(*m)[n]){
     int first_stop = n - 1;
     int second_stop = 0;
     int i = 0, j = 0;
@@ -16,7 +29,7 @@ int main(){
     for (int k = 0; k < (n / 2) + 1; ++k){
         while (j < first_stop){
             ++j;  
-            printf("%d\n", m[i][j]);  
+            printf("%d\n", m[i][j]);
         }
         while (i < first_stop) {
             ++i;
@@ -33,8 +46,6 @@ int main(){
         first_stop -= 1;
         ++second_stop;
     }
-
     putchar('\n');
-    return 0;
-}  
+}
                                  
